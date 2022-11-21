@@ -21,7 +21,7 @@
                         @endforeach
     
                     @endif
-                        <form method="POST" action="addEmployeeData">
+                        <form method="POST" action="{{route('employee.store')}}">
                             @csrf
                             <!-- first input -->
                             <div class="form-outline mb-4">

@@ -24,14 +24,7 @@
 </head>
 
 <body>
-    {{-- @php
-if(session()->missing('user')){
-    
-    return redirect('/login');
-}else{
 
-}
-@endphp --}}
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="bg-white" id="sidebar-wrapper">
@@ -51,9 +44,7 @@ if(session()->missing('user')){
                         <a href="/registers"
                             class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                                 class="fas fas fa-biohazard me-2"></i>Registers</a>
-                    
-                             
-                @endif
+                    @endif
                 @endif
 
 
@@ -61,6 +52,7 @@ if(session()->missing('user')){
                         class="fas fa-power-off me-2"></i>Logout</a> --}}
             </div>
         </div>
+
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
@@ -87,7 +79,7 @@ if(session()->missing('user')){
                                 <i class="fas fa-user me-2"></i>{{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="profile">Profile</a></li>
+                                <li><a class="dropdown-item" href="{{route('profile.index')}}">Profile</a></li>
                                 <li><a class="dropdown-item" href="#">Settings</a></li>
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
@@ -104,23 +96,23 @@ if(session()->missing('user')){
                 </div>
             </nav>
 
-
             @yield('content')
 
+        </div>
+    </div>
 
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var el = document.getElementById("wrapper");
+        var toggleButton = document.getElementById("menu-toggle");
 
-            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
-            <script>
-                var el = document.getElementById("wrapper");
-                var toggleButton = document.getElementById("menu-toggle");
-
-                toggleButton.onclick = function() {
-                    el.classList.toggle("toggled");
-                };
-            </script>
-            @yield('script')
+        toggleButton.onclick = function() {
+            el.classList.toggle("toggled");
+        };
+    </script>
+    @yield('script')
 </body>
 
 </html>

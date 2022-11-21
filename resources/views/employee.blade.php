@@ -9,7 +9,7 @@
 
 
         <div class="row my-5">
-            <h3 class="fs-4 mb-3">Recent Orders <a href="addEmployee"> <button type="button" style="margin-left: 15px"
+            <h3 class="fs-4 mb-3">Recent Orders <a href="{{route('employee.create')}}"> <button type="button" style="margin-left: 15px"
                         class="btn btn-success">
                         Add Employee
                     </button></a></h3>
@@ -45,7 +45,7 @@
 
 
                                 <td>
-                                    <a href={{ '/employee/editEmployee/' . $items['id'] }} id=""
+                                    <a href={{ route('employee.edit' , $items->id) }} id=""
                                         class="text-success mx-1">Update</a>
                                     {{-- <a href={{'deleteEmployee/'.$items['id']}} id="" class="text-danger mx-1" >Delete</a> --}}
                                     <a href='' id="" class="text-danger mx-1 deleteEmployee">Delete</a>

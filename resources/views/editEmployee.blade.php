@@ -20,8 +20,9 @@
                         @endforeach
     
                     @endif
-                        <form method="POST" action="/updateEmployee">
+                        <form method="POST" action="{{route('employee.update',$editEmployee->id)}}">
                             @csrf
+                            @method('PATCH')
                             <!-- first input -->
                             <div class="form-outline mb-4">
                                 <input type="hidden" value="{{$editEmployee['id']}}" name="id">

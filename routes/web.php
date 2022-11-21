@@ -1,11 +1,16 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\profileController;
+use App\Http\Controllers\profiles;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\registerController;
+use App\Http\Controllers\EmployeesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,31 +32,43 @@ Route::get('/', function () {
 
 Route::get('/dashboard', function () {
     return view('index');
-})->middleware(['auth', 'verified','isAdmin'])->name('dashboard');
+})->middleware(['auth', 'verified', 'isAdmin'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
 
 
-Route::get('/company', [AdminController::class, 'company'])->name('company');
-Route::get('/add', [AdminController::class, 'add'])->name('add');
-Route::post('/addCompany', [AdminController::class, 'addCompany'])->name('addCompany');
-Route::delete('/deleteCompany/{id}', [AdminController::class, 'deleteCompany']);
-Route::get('/company/edit/{id}', [AdminController::class, 'editCompany']);
-Route::post('/updateCompany', [AdminController::class, 'updateCompany'])->name('updateCompany');
+// Route::get('/company', [AdminController::class, 'company'])->name('company');
+// Route::get('/add', [AdminController::class, 'add'])->name('add');
+// Route::post('/addCompany', [AdminController::class, 'addCompany'])->name('addCompany');
+// Route::get('/company/edit/{id}', [AdminController::class, 'editCompany']);
+// Route::post('/updateCompany', [AdminController::class, 'updateCompany'])->name('updateCompany');
+// Route::delete('/deleteCompany/{id}', [AdminController::class, 'deleteCompany']);
 
-Route::get('/employee', [EmployeeController::class, 'employee']);
-Route::get('/addEmployee', [EmployeeController::class, 'addemployee']);
-Route::post('/addEmployeeData', [EmployeeController::class, 'addEmployeeData'])->name('addEmployeeData');
-Route::get('/employee/editEmployee/{id}', [EmployeeController::class, 'editEmployee'])->name('editEmployee');
-Route::post('/updateEmployee', [EmployeeController::class, 'updateEmployee'])->name('updateEmployee');
-Route::delete('/deleteEmployee/{id}', [EmployeeController::class, 'deleteEmployee'])->name('deleteEmployee');
+Route::resource('/company', CompanyController::class);
+Route::resource('/employee', EmployeesController::class);
 
-Route::get('/profile', [profileController::class, 'indexProfile']);
-Route::post('/updateProfile', [profileController::class, 'updateProfile'])->name('updateProfile');
+
+
+
+
+
+// Route::get('/employee', [EmployeeController::class, 'employee']);
+// Route::get('/addEmployee', [EmployeeController::class, 'addemployee']);
+// Route::post('/addEmployeeData', [EmployeeController::class, 'addEmployeeData'])->name('addEmployeeData');
+// Route::get('/employee/editEmployee/{id}', [EmployeeController::class, 'editEmployee'])->name('editEmployee');
+// Route::post('/updateEmployee', [EmployeeController::class, 'updateEmployee'])->name('updateEmployee');
+// Route::delete('/deleteEmployee/{id}', [EmployeeController::class, 'deleteEmployee'])->name('deleteEmployee');
+
+// Route::get('/profile', [profileController::class, 'indexProfile']);
+// Route::post('/updateProfile', [profileController::class, 'updateProfile'])->name('updateProfile');
 Route::post('/password', [profileController::class, 'password'])->name('password');
+Route::resource('/profile', profiles::class);
+
+// Route::get('/profile', [profileController::class, 'indexProfile']);
 
 
-Route::get('/profile', [profileController::class, 'indexProfile']);
+Route::resource("/registers", registerController::class);
 
+Auth::routes();
 
-Route::resource("/registers",registerController::class);
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

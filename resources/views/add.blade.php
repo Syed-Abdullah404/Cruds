@@ -19,7 +19,7 @@
                         @endforeach
     
                     @endif
-                        <form method="POST" action="addCompany">
+                        <form method="POST" action="{{route('company.store')}}">
                             @csrf
                             <!-- Email input -->
                             <div class="form-outline mb-4">

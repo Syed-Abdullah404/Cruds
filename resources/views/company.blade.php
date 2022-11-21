@@ -8,7 +8,7 @@
                
 
                 <div class="row my-5">
-                    <h3 class="fs-4 mb-3">Recent Orders  <a href="add"> <button type="button" style="margin-left: 15px" class="btn btn-success" >
+                    <h3 class="fs-4 mb-3">Recent Orders  <a href="{{route('company.create')}}"> <button type="button" style="margin-left: 15px" class="btn btn-success" >
                         Add Company 
                       </button></a></h3>
                   
@@ -23,7 +23,7 @@
                                     <th scope="col" >Action</th>
                                 </tr>
                             </thead>
-                            @foreach ($showCompany  as $item)
+                            @foreach ($show  as $item)
                                 
                             <tbody>
                                 <tr>
@@ -35,7 +35,8 @@
                               
 
                                     <td> 
-                                        <a href={{"/company/edit/".$item['id']}} id="" class="text-success mx-1" >Update</a>
+                                        {{-- <a href={{"company.edit/".$item['id']}} id="" class="text-success mx-1" >Update</a> --}}
+                                        <a href={{ route('company.edit', $item->id) }} id="" class="text-success mx-1" >Update</a>
                                         {{-- <a href={{'deleteCompany/'.$item['id']}} id="" class="text-danger mx-1" >Delete</a> --}}
                                         <a href='' id="" class="text-danger mx-1 deleteCompany">Delete</a>
                                     </td>
@@ -45,7 +46,7 @@
                             @endforeach
                         </table>
                         <div class="row  mb-5 mt-4">
-                            {{$showCompany->links()}}
+                            {{$show->links()}}
                         </div>
                     </div>
                 </div>
@@ -93,7 +94,7 @@
                             })
                             $.ajax({
                                 type: "Delete",
-                                url: '/deleteCompany/' + del_id,
+                                url: "{{route('company.destroy')" + del_id,
 
 
                                 success: function(response) {
