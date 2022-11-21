@@ -18,7 +18,7 @@ class CompanyController extends Controller
     public function index()
     {
         $show = company::paginate(5);
-        return view('company',compact('show'));
+        return view('company/company',compact('show'));
     }
 
     /**
@@ -28,7 +28,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('add');
+        return view('company/partial/add');
     }
 
     /**
@@ -50,7 +50,7 @@ class CompanyController extends Controller
         Mail::to(
             $request->email
         )->send(new Orders($request));
-        return redirect('/company');
+        return redirect('company/company');
     }
 
     /**
@@ -73,7 +73,7 @@ class CompanyController extends Controller
     public function edit($id)
     {
         $editCompany = company::find($id);
-        return view('edit',compact('editCompany'));
+        return view('company/partial/edit',compact('editCompany'));
     }
 
     /**
@@ -90,7 +90,7 @@ class CompanyController extends Controller
          $companyUpdate->name = $request->name;
          $companyUpdate->email = $request->email;
          $companyUpdate->save();
-         return redirect('company');
+         return redirect('company/company');
      //   echo "<script>console.log($companyUpdate)</script>"; 
     }
 

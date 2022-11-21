@@ -15,9 +15,9 @@ class EmployeesController extends Controller
      */
     public function index()
     {
-        $showEmployee = employees::paginate(3);
+        $showEmployee = employees::paginate(5);
 
-        return view('employee',compact('showEmployee'));
+        return view('employee/employee',compact('showEmployee'));
     }
 
     /**
@@ -29,7 +29,7 @@ class EmployeesController extends Controller
     {
         $show = company::all();
 
-        return view('addEmployee', ['showCompany' => $show]);
+        return view('employee/partial/addEmployee', ['showCompany' => $show]);
     }
 
     /**
@@ -54,7 +54,7 @@ class EmployeesController extends Controller
         $companyInsert->phone = $request->phone;
         $companyInsert->company = $request->company;
         $companyInsert->save();
-        return redirect('/employee');
+        return redirect('employee/employee');
     }
 
     /**
@@ -78,7 +78,7 @@ class EmployeesController extends Controller
     {
         $companies = company::get();
         $editEmployee = Employees::find($id);
-        return view('editEmployee', ['editEmployee' => $editEmployee],['company' => $companies]);
+        return view('company/partial/editEmployee', ['editEmployee' => $editEmployee],['company' => $companies]);
     }
 
     /**
@@ -98,7 +98,7 @@ class EmployeesController extends Controller
         $EmployeeUpdate->phone = $request->phone;
         $EmployeeUpdate->company = $request->company;
         $EmployeeUpdate->save();
-        return redirect('employee');
+        return redirect('company/employee');
     //   echo "<script>console.log($EmployeeUpdate)</script>"; 
     }
 

@@ -15,7 +15,7 @@ class registerController extends Controller
     public function index()
     {
         $register = User::paginate(5);
-        return view('/registers')->with('register_user',$register);
+        return view('register/registers')->with('register_user',$register);
 
     }
 
@@ -50,7 +50,7 @@ class registerController extends Controller
     {
         $editRegister = User::find($id);
         
-        return view('/registers',compact('editRegister'));
+        return view('register/registers',compact('editRegister'));
     }
 
     /**
@@ -62,7 +62,7 @@ class registerController extends Controller
     public function edit($id)
     {
           $editRegister = User::find($id);
-        return view('editRegister',compact('editRegister'));
+        return view('register/partial/editRegister',compact('editRegister'));
     }
 
     /**
@@ -84,7 +84,7 @@ class registerController extends Controller
         $EmployeeUpdate->email = $request->email;
         $EmployeeUpdate->role_as = $request->check;
         $EmployeeUpdate->save();
-        return redirect('/registers');
+        return redirect('register/registers');
     }
 
     /**
