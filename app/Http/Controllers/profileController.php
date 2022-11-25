@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\todoModel;
 use App\Models\login;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Console\View\Components\Alert;
 
 class profileController extends Controller
@@ -38,10 +40,10 @@ class profileController extends Controller
             'new_password' => [
                 'required',
                 'min:8',
-                'regex:/[a-z]/',      // must contain at least one lowercase letter
-                'regex:/[A-Z]/',      // must contain at least one uppercase letter
-                'regex:/[0-9]/',      // must contain at least one digit
-                'regex:/[@$!%*#?&]/', // must contain a special character
+                // 'regex:/[a-z]/',      // must contain at least one lowercase letter
+                // 'regex:/[A-Z]/',      // must contain at least one uppercase letter
+                // 'regex:/[0-9]/',      // must contain at least one digit
+                // 'regex:/[@$!%*#?&]/', // must contain a special character
 
             ],
             'confirm_password' => 'required|same:new_password'
@@ -59,5 +61,17 @@ class profileController extends Controller
             return redirect()->back()->with('success', 'Password update');
         }
         return redirect()->back()->with('error', 'Password change failed');
+    }
+
+
+
+    public function update(Request $request)
+    {
+        if ($request->ajax()) {
+            $taskes = todoModel::find($request->pk);
+            $taskes->task = $request->value;
+
+            $taskes->save();
+        }
     }
 }

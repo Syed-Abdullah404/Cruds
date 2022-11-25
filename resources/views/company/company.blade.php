@@ -58,9 +58,6 @@
     </div>
 
  
-    
-    
-
 
     @endsection
     @section('script')
