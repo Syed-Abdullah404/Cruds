@@ -23,10 +23,20 @@
     </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/js/jquery-editable-poshytip.min.js">
     </script>
-
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: 'textarea'
+        });
+    </script>
     <style>
         .w-3 {
             display: none;
+        }
+
+        a {
+            text-decoration: none;
+
         }
     </style>
 </head>
@@ -36,30 +46,37 @@
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
         <div class="bg-white" id="sidebar-wrapper">
-           <a href="/dashboard">
-               <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
-                class="fas fa-user-secret me-2"></i>Codersbite</div>
-            </a> 
+            <a href="/dashboard">
+                <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
+                        class="fas fa-user-secret me-2"></i>Codersbite</div>
+            </a>
             <div class="list-group list-group-flush my-3">
                 {{-- <a href="/dashboard" class="list-group-item list-group-item-action bg-transparent second-text active"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a> --}}
-                <a href="/company" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="/company" class="list-group-item list-group-item-action bg-transparent text-success fw-bold"><i
                         class="fas fa-project-diagram me-2"></i>Company</a>
-                <a href="/employee" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="/employee"
+                    class="list-group-item list-group-item-action bg-transparent text-success fw-bold"><i
                         class="fas fa-chart-line me-2"></i>Employee</a>
                 @if (Auth::check())
 
 
                     @if (Auth::user()->role_as == 1)
                         <a href="/registers"
-                            class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                            class="list-group-item list-group-item-action bg-transparent text-success fw-bold"><i
                                 class="fas fas fa-biohazard me-2"></i>Registers</a>
+
+                        <a href="/postShow"
+                            class="list-group-item list-group-item-action bg-transparent text-success fw-bold"><i
+                                class="fab fa-asymmetrik me-2"></i>Posts show</a>
                     @endif
                 @endif
 
 
-                {{-- <a href="/logout" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
-                        class="fas fa-power-off me-2"></i>Logout</a> --}}
+                <a href="/post" class="list-group-item list-group-item-action bg-transparent text-success fw-bold"><i
+                        class="fas fa-archive me-2"></i>Post</a>
+                <a href="/allpost" class="list-group-item list-group-item-action bg-transparent  fw-bold"
+                    text-success><i class="fab fa-atlassian me-2"></i>All Posts</a>
             </div>
         </div>
 
@@ -107,7 +124,6 @@
             </nav>
 
             @yield('content')
-
         </div>
     </div>
 

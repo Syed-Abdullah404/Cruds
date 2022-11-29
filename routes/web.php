@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Database\Eloquent\Model;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\showPostController;
+use App\Http\Controllers\showAllPostController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\profileController;
@@ -69,3 +72,7 @@ Route::resource("/todo", todo::class);
 Route::post('/dasboard', [profileController::class, 'update'])->name('dashboard.update');
 // Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('/post', PostController::class);
+Route::resource('/postShow', showPostController::class);
+Route::resource('/allpost', showAllPostController::class);

@@ -5,12 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class todoModel extends Model
+class Post extends Model
 {
     use HasFactory;
-    protected $table = 'todo';
-    protected $fillable = ['completed'];   
-    
+    // protected $table ="posts";
+    protected $fillable = [
+        'title',
+        'body',
+        'image',     
+        'user_id',
+        'username',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);

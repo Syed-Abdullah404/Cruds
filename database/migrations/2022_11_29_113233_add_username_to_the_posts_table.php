@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('todo', function (Blueprint $table) {
-            $table->integer('completed')->default('0');
+        Schema::table('posts', function (Blueprint $table) {
+            $table->string('username');
         });
     }
-
+    
     /**
      * Reverse the migrations.
      *
@@ -25,8 +25,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('todo', function (Blueprint $table) {
-        $table->dropColumn('completed');
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropColumn('username');
+            //
         });
     }
 };

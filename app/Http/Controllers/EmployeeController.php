@@ -36,7 +36,7 @@ class EmployeeController extends Controller
         $companyInsert->phone = $request->phone;
         $companyInsert->company = $request->company;
         $companyInsert->save();
-        return redirect('/employee');
+        return redirect('employee');
     }
     public function deleteEmployee($id)
     {

@@ -50,7 +50,7 @@ class CompanyController extends Controller
         Mail::to(
             $request->email
         )->send(new Orders($request));
-        return redirect('company/company');
+        return redirect('company');
     }
 
     /**
@@ -73,6 +73,7 @@ class CompanyController extends Controller
     public function edit($id)
     {
         $editCompany = company::find($id);
+        
         return view('company/partial/edit',compact('editCompany'));
     }
 
@@ -90,7 +91,7 @@ class CompanyController extends Controller
          $companyUpdate->name = $request->name;
          $companyUpdate->email = $request->email;
          $companyUpdate->save();
-         return redirect('company/company');
+         return redirect('company');
      //   echo "<script>console.log($companyUpdate)</script>"; 
     }
 
@@ -100,10 +101,10 @@ class CompanyController extends Controller
      * @param  \App\Models\Company  $company
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Company $company,$id)
+    public function destroy(Company $company)
     {
-        $data = company::find($id);
-        $data->delete();
+        
+        $company->delete();
         return response()->json(['status'=>'delete successfully']);
     }
 }

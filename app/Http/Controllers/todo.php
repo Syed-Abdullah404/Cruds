@@ -53,7 +53,7 @@ class todo extends Controller
      */
     public function show(todo $todo, $id)
     {
-        $check = todoModel::find($id);
+        $check = todoModel::findOrfail($id);
         if ($check->completed) {
             $check->update(['completed' => false]);
             return redirect()->back();
@@ -85,7 +85,7 @@ class todo extends Controller
     {
         // dd($request);
         if ($request->ajax()) {
-            todoModel::find($id)
+            todoModel::findOrfail($id)
                 ->update([
                     // $request->name => $request->value
                     'task' => $request->todo,

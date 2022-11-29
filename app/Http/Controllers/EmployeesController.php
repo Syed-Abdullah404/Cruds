@@ -54,7 +54,7 @@ class EmployeesController extends Controller
         $companyInsert->phone = $request->phone;
         $companyInsert->company = $request->company;
         $companyInsert->save();
-        return redirect('employee/employee');
+        return redirect('/employee');
     }
 
     /**
@@ -78,7 +78,7 @@ class EmployeesController extends Controller
     {
         $companies = company::get();
         $editEmployee = Employees::find($id);
-        return view('company/partial/editEmployee', ['editEmployee' => $editEmployee],['company' => $companies]);
+        return view('employee/partial/editEmployee', ['editEmployee' => $editEmployee],['company' => $companies]);
     }
 
     /**
@@ -98,7 +98,7 @@ class EmployeesController extends Controller
         $EmployeeUpdate->phone = $request->phone;
         $EmployeeUpdate->company = $request->company;
         $EmployeeUpdate->save();
-        return redirect('company/employee');
+        return redirect('employee');
     //   echo "<script>console.log($EmployeeUpdate)</script>"; 
     }
 
@@ -108,8 +108,9 @@ class EmployeesController extends Controller
      * @param  \App\Models\employees  $employees
      * @return \Illuminate\Http\Response
      */
-    public function destroy(employees $employees)
+    public function destroy(employees $employee)
     {
-        //
+        $employee->delete();
+        return response()->json(['status'=>'delete successfully']);
     }
 }

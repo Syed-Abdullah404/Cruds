@@ -1,13 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\employees;
-use App\Models\User;
-use Illuminate\Console\View\Components\Alert;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
-class registerController extends Controller
+class showAllPostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +13,8 @@ class registerController extends Controller
      */
     public function index()
     {
-        $register = User::paginate(5);
-        return view('register/registers')->with('register_user',$register);
-
+        $showPost = post::latest()->get();
+        return view('ShowAllPost/index',compact('showPost'));
     }
 
     /**
@@ -50,9 +46,7 @@ class registerController extends Controller
      */
     public function show($id)
     {
-        $editRegister = User::find($id);
-        
-        return view('register/registers',compact('editRegister'));
+        //
     }
 
     /**
@@ -63,8 +57,7 @@ class registerController extends Controller
      */
     public function edit($id)
     {
-          $editRegister = User::find($id);
-        return view('register/partial/editRegister',compact('editRegister'));
+        //
     }
 
     /**
@@ -76,12 +69,7 @@ class registerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $EmployeeUpdate = User::find($request->id);
-        $EmployeeUpdate->name = $request->name;
-        $EmployeeUpdate->email = $request->email;
-        $EmployeeUpdate->role_as = $request->check;
-        $EmployeeUpdate->save();
-        return redirect('registers');
+        //
     }
 
     /**
@@ -90,9 +78,8 @@ class registerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User  $user)
+    public function destroy($id)
     {
-        $user->delete();
-        return response()->json(['status'=>'delete successfully']);
+        //
     }
 }

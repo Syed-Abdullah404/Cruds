@@ -38,8 +38,12 @@
                                     <a href={{ route('registers.edit', $item->id) }} id=""
                                         class="text-success mx-1">Update</a>
 
-                                    <a href='' id="" class="text-danger mx-1 deleteCompany">Delete</a>
-
+                                    {{-- <a href='' id="" class="text-danger mx-1 deleteCompany">Delete</a> --}}
+                                    <form method="post" class="delete-form"
+                                    data-route="{{ route('registers.destroy', $item->id) }}">
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
                                 </td>
                             </tr>
 
@@ -55,57 +59,36 @@
     </div>
 @endsection
 @section('script')
-    <script>
-        $(document).ready(function() {
-            $.ajaxSetup({
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        $('.delete-form').on('submit', function(e) {
+            e.preventDefault();
+
+            $.ajax({
+                type: 'post',
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                url: $(this).data('route'),
+                data: {
+                    '_method': 'delete'
+                },
+                success: function(response) {
+
+                    Swal.fire(
+                            'Deleted!',
+                            'Your data has been deleted.',
+                            'success',
+
+                        )
+                        .then((result) => {
+                            location.reload();
+                        });
                 }
             });
-            $('.deleteCompany').click(function(e) {
-                e.preventDefault();
-                var del_id = $(this).closest('tr').find('.delid').val();
-                // alert($del_id);
-                Swal.fire({
-                        title: 'Are you sure?',
-                        text: "You won't be able to revert this!",
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Yes, delete it!'
-                    })
-                    .then((result) => {
-                        if (result.isConfirmed) {
 
-                            $.ajaxSetup({
-                                headers: {
-                                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                                }
-                            })
-                            $.ajax({
-                                type: "Delete",
-                                url: '/registers/' + del_id,
-
-
-                                success: function(response) {
-                                    Swal.fire(
-                                            'Deleted!',
-                                            'Your data has been deleted.',
-                                            'success',
-
-                                        )
-                                        .then((result) => {
-                                            location.reload();
-                                        });
-                                }
-                            });
-
-
-
-                        }
-                    })
-            });
-        });
-    </script>
+        })
+    });
+</script>
 @endsection
