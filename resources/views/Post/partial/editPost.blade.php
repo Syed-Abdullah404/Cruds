@@ -5,14 +5,14 @@
 
 
         <div class="row my-5">
-            <h3 class="fs-4 mb-3">Add Company Data</h3>
+          
             <div class="col">
                 <div class="container">
                     <div class="row">
 
 
                         <div class="col-lg-4"></div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 card">
                             @if ($errors->any())
                                 @foreach ($errors->all() as $error)
                                     <p class="text-danger">{{ $error }}</p>

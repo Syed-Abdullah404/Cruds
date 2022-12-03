@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->string('username')->nullable();
+            $table->dropColumn('title');
         });
     }
-    
+
     /**
      * Reverse the migrations.
      *
@@ -26,8 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->dropColumn('username');
-            //
+            $table->string('title');
         });
     }
 };

@@ -27,14 +27,12 @@
 
 #wrapper {
   overflow-x: hidden;
-  background-image: linear-gradient(
-    to right,
-    #baf3d7,
-    #c2f5de,
-    #cbf7e4,
-    #d4f8ea,
-    #ddfaef
-  );
+  background-image: linear-gradient(to right,
+      #baf3d7,
+      #c2f5de,
+      #cbf7e4,
+      #d4f8ea,
+      #ddfaef);
 }
 
 #sidebar-wrapper {
@@ -91,5 +89,16 @@
 
   #wrapper.toggled #sidebar-wrapper {
     margin-left: -15rem;
+  }
+
+
+  .card {
+    border: 1px solid rgb(57, 64, 101);
+    padding: 40px;
+    border-radius: 18px;
+/* background-color: red; */
+    box-shadow: 40px 40px 20px 0px rgba(0, 0, 0, 0.295);
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
   }
 }

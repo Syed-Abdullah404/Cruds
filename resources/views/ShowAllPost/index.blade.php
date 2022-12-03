@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,12 +10,15 @@
     <!-- style css link -->
     <link rel="stylesheet" href="showPost.css">
     <!-- fontawesome css link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
-    
-<!-- header section start -->
+
+    <!-- header section start -->
 
 
     <header>
@@ -45,329 +49,337 @@
     </header>
 
 
-<!-- header section end -->
-<!-- home section start -->
+    <!-- header section end -->
+    <!-- home section start -->
 
 
-<div class="home">
-    <div class="container">
-        <div class="home-weapper">
+    <div class="home">
+        <div class="container">
+            <div class="home-weapper">
 
-            <!-- home left start here -->
-            <div class="home-left">
+                <!-- home left start here -->
+                <div class="home-left">
 
-                <div class="profile">
-                    <img src="image/ShowAllPost/images/user.jpg" alt="user">
-                    <h3>Zahidul hossain</h3>
-                </div>
-               
-                <div class="pages">
-                    <h4 class="mini-headign">Pages</h4>
-                    <label>
-                        <img src="image/ShowAllPost/images/messenger.png" alt="messenger">
-                        <span>messenger</span>
-                    </label>
-                    <label>
-                        <img src="image/ShowAllPost/images/instagram.png" alt="instagram">
-                        <span>instagram</span>
-                    </label>
-                    <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button>
-                </div>
-
-                <div class="group">
-                    <h4 class="mini-headign">Group</h4>
-                    <label>
-                        <img src="image/ShowAllPost/images/gg.png" alt="group01">
-                        <span>Graphic design</span>
-                    </label>
-                    
-                    <label>
-                        <img src="image/ShowAllPost/images/gg2.png" alt="group02">
-                        <span>website design</span>
-                    </label>
-
-                    <label>
-                        <img src="image/ShowAllPost/images/gg3.png" alt="group03">
-                        <span>ZED.zahidul</span>
-                    </label>
-
-                    <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button>
-                </div>
-
-                <div class="games">
-                    <h4 class="mini-headign">Games</h4>
-                    <label>
-                        <img src="image/ShowAllPost/images/game.png" alt="game01">
-                        <span>Facebook games</span>
-                    </label>
-                    <label>
-                        <img src="image/ShowAllPost/images/game2.png" alt="game02">
-                        <span>Free Play Games</span>
-                    </label>
-                    <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button>
-                </div>
-
-                <div class="explore">
-                    <h4 class="mini-headign">Explore</h4>
-                   
-                    <a href="#"><i class="fa-solid fa-user-group"></i> Group</a>
-                    <a href="#"><i class="fa-solid fa-star"></i></i> Favorites</a>
-                    <a href="#"><i class="fa-solid fa-bookmark"></i></i> Saves</a>
-                    <a href="#"><i class="fa-solid fa-clock"></i> Events</a>
-                    <a href="#"><i class="fa-solid fa-flag"></i> Pages</a>
-
-                    <div><label class="darkTheme"> <span></span></label> Apply Dark Theme</div>
-
-                    <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button>
-                </div>
-                
-            </div><!-- home left end here -->
-
-            <!-- home center start here -->
-
-            <div class="home-center">
-                <div class="home-center-wrapper">
-                    <div class="stories">
-                        <h3 class="mini-headign">Stories</h3>
-                        <div class="stories-wrapper">
-
-                            <div class="single-stories">
-                                <label><img src="image/ShowAllPost/images/user.jpg" alt="user"></label>
-                                <div>
-                                    <img src="image/ShowAllPost/images/user.jpg" alt="user">
-                                    <i class="fa-solid fa-circle-plus"></i>
-                                    <b>Create Stories</b>
-                                </div>
-                            </div>
-
-                            <div class="single-stories">
-                                <label><img src="image/ShowAllPost/images/us.png" alt="sp"></label>
-                                <div>
-                                    <img src="image/ShowAllPost/images/ss.jpg" alt="ss">
-                                    <b>Your Name</b>
-                                </div>
-                            </div>
-
-                            <div class="single-stories">
-                                <label><img src="image/ShowAllPost/images/us2.png" alt="sp2"></label>
-                                <div>
-                                    <img src="image/ShowAllPost/images/ss2.jpg" alt="ss2">
-                                    <b>Your Name</b>
-                                </div>
-                            </div>
-
-                            <div class="single-stories">
-                                <label><img src="image/ShowAllPost/images/us3.png" alt="sp3"></label>
-                                <div>
-                                    <img src="image/ShowAllPost/images/ss3.jpg" alt="ss3">
-                                    <b>Your Name</b>
-                                </div>
-                            </div>
-
-                            <div class="single-stories">
-                                <label><img src="image/ShowAllPost/images/us4.png" alt="sp4"></label>
-                                <div>
-                                    <img src="image/ShowAllPost/images/ss4.jpg" alt="ss4">
-                                    <b>Your Name</b>
-                                </div>
-                            </div>
-
-
-                        </div>
+                    <div class="profile">
+                        <img src="image/ShowAllPost/images/user.jpg" alt="user">
+                        <h3>Zahidul hossain</h3>
                     </div>
 
-
-                    <div class="createPost">
-
-                        <h3 class="mini-headign">Create Post</h3>
-                        <div class="post-text">
-                            <img src="image/ShowAllPost/images/user.jpg" alt="user">
-                            <input type="text-area" placeholder="What's on your mind, zahidul">
-                        </div>
-
-                        <div class="post-icon">
-                            <a href="#" style="background: #ffebed;">
-                            <i style="background: #ff4154;" class="fa-solid fa-camera"></i>
-                            Gallery</a>
-
-                            <a href="#" style="background: #ccdcff;">
-                            <i style="background: #0053ff;" class="fa-solid fa-video"></i>
-                            Video</a>
-
-                            <a href="#" style="background: #d7ffef;">
-                            <i style="background: #00d181;" class="fa-solid fa-location-dot"></i>
-                            Location</a>
-
-                            <a href="#" style="background: #cff3ff;">
-                            <i style="background: #04c3ff;" class="fa-solid fa-gift"></i>
-                            Gift</a>
-                            
-                            <a href="#" style="background: #fff4d1;">
-                            <i style="background: #ffca28;" class="fa-solid fa-face-grin-beam"></i>
-                            Feeling / Activity</a>
-
-                        </div>
-
+                    <div class="pages">
+                        <h4 class="mini-headign">Pages</h4>
+                        <label>
+                            <img src="image/ShowAllPost/images/messenger.png" alt="messenger">
+                            <span>messenger</span>
+                        </label>
+                        <label>
+                            <img src="image/ShowAllPost/images/instagram.png" alt="instagram">
+                            <span>instagram</span>
+                        </label>
+                        <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button>
                     </div>
 
-                   @foreach ($showPost as $item)
-                       
-                   <div class="fb-post1 " style="margin-bottom: 23px;">
-                       <div class="fb-post1-container">
-                            {{-- <div class="fb-post1-header">
+                    <div class="group">
+                        <h4 class="mini-headign">Group</h4>
+                        <label>
+                            <img src="image/ShowAllPost/images/gg.png" alt="group01">
+                            <span>Graphic design</span>
+                        </label>
+
+                        <label>
+                            <img src="image/ShowAllPost/images/gg2.png" alt="group02">
+                            <span>website design</span>
+                        </label>
+
+                        <label>
+                            <img src="image/ShowAllPost/images/gg3.png" alt="group03">
+                            <span>ZED.zahidul</span>
+                        </label>
+
+                        <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button>
+                    </div>
+
+                    <div class="games">
+                        <h4 class="mini-headign">Games</h4>
+                        <label>
+                            <img src="image/ShowAllPost/images/game.png" alt="game01">
+                            <span>Facebook games</span>
+                        </label>
+                        <label>
+                            <img src="image/ShowAllPost/images/game2.png" alt="game02">
+                            <span>Free Play Games</span>
+                        </label>
+                        <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button>
+                    </div>
+
+                    <div class="explore">
+                        <h4 class="mini-headign">Explore</h4>
+
+                        <a href="#"><i class="fa-solid fa-user-group"></i> Group</a>
+                        <a href="#"><i class="fa-solid fa-star"></i></i> Favorites</a>
+                        <a href="#"><i class="fa-solid fa-bookmark"></i></i> Saves</a>
+                        <a href="#"><i class="fa-solid fa-clock"></i> Events</a>
+                        <a href="#"><i class="fa-solid fa-flag"></i> Pages</a>
+
+                        <div><label class="darkTheme"> <span></span></label> Apply Dark Theme</div>
+
+                        <button class="see-more-btn">See more <i class="fa-solid fa-angle-down"></i></button>
+                    </div>
+
+                </div><!-- home left end here -->
+
+                <!-- home center start here -->
+
+                <div class="home-center">
+                    <div class="home-center-wrapper">
+                        <div class="stories">
+                            <h3 class="mini-headign">Stories</h3>
+                            <div class="stories-wrapper">
+
+                                <div class="single-stories">
+                                    <label><img src="image/ShowAllPost/images/user.jpg" alt="user"></label>
+                                    <div>
+                                        <img src="image/ShowAllPost/images/user.jpg" alt="user">
+                                        <i class="fa-solid fa-circle-plus"></i>
+                                        <b>Create Stories</b>
+                                    </div>
+                                </div>
+
+                                <div class="single-stories">
+                                    <label><img src="image/ShowAllPost/images/us.png" alt="sp"></label>
+                                    <div>
+                                        <img src="image/ShowAllPost/images/ss.jpg" alt="ss">
+                                        <b>Your Name</b>
+                                    </div>
+                                </div>
+
+                                <div class="single-stories">
+                                    <label><img src="image/ShowAllPost/images/us2.png" alt="sp2"></label>
+                                    <div>
+                                        <img src="image/ShowAllPost/images/ss2.jpg" alt="ss2">
+                                        <b>Your Name</b>
+                                    </div>
+                                </div>
+
+                                <div class="single-stories">
+                                    <label><img src="image/ShowAllPost/images/us3.png" alt="sp3"></label>
+                                    <div>
+                                        <img src="image/ShowAllPost/images/ss3.jpg" alt="ss3">
+                                        <b>Your Name</b>
+                                    </div>
+                                </div>
+
+                                <div class="single-stories">
+                                    <label><img src="image/ShowAllPost/images/us4.png" alt="sp4"></label>
+                                    <div>
+                                        <img src="image/ShowAllPost/images/ss4.jpg" alt="ss4">
+                                        <b>Your Name</b>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="createPost">
+
+                            <h3 class="mini-headign">Create Post</h3>
+                            <div class="post-text">
+                                <img src="image/ShowAllPost/images/user.jpg" alt="user">
+                                <input type="text-area" placeholder="What's on your mind, zahidul">
+                            </div>
+
+                            <div class="post-icon">
+                                <a href="#" style="background: #ffebed;">
+                                    <i style="background: #ff4154;" class="fa-solid fa-camera"></i>
+                                    Gallery</a>
+
+                                <a href="#" style="background: #ccdcff;">
+                                    <i style="background: #0053ff;" class="fa-solid fa-video"></i>
+                                    Video</a>
+
+                                <a href="#" style="background: #d7ffef;">
+                                    <i style="background: #00d181;" class="fa-solid fa-location-dot"></i>
+                                    Location</a>
+
+                                <a href="#" style="background: #cff3ff;">
+                                    <i style="background: #04c3ff;" class="fa-solid fa-gift"></i>
+                                    Gift</a>
+
+                                <a href="#" style="background: #fff4d1;">
+                                    <i style="background: #ffca28;" class="fa-solid fa-face-grin-beam"></i>
+                                    Feeling / Activity</a>
+
+                            </div>
+
+                        </div>
+
+                        @foreach ($showPost as $item)
+                            <div class="fb-post1 " style="margin-bottom: 23px;">
+                                <div class="fb-post1-container">
+                                    {{-- <div class="fb-post1-header">
                                 <ul>
                                     <li class="active">popular</li>
                                     <li>recent</li>
                                     <li>most view</li>
                                 </ul>
                             </div> --}}
-                            <div class="fb-p1-main">
-                                <div class="post-title">
-                                    <img src="image/ShowAllPost/images/user2.jpg" alt="user picture">
-                                    <ul>
-                                        <li><h3>{{$item->username}}<span> . 2 hours ago</span></h3></li>
-                                        <li><span>02 march at 12:55 PM</span></li>
-                                        <li><span>{{$item->title}}</span></li>
-                                    </ul>
-                                    
-                                    
-                                </div>
-                                <h4>
+                                    <div class="fb-p1-main">
+                                        <div class="post-title">
+                                            <img src="image/ShowAllPost/images/user2.jpg" alt="user picture">
+                                            <ul>
+                                               
+                                                    
+                                              
+                                                <li>
+                                                    <h3>{{ $item->user->name }}<span> . 2 hours ago</span></h3>
+                                                </li>
+                                          
+                                                <li><span>02 march at 12:55 PM</span></li>
+                                                <li></li>
+                                            </ul>
+                                            <span>{{ $item->title }}</span>
 
-                                    {{$item->body}}
-                                </h4>
-                                <div class="post-images">
-                                    <img src="image/posts/{{$item->image}}" alt="post images 01" height="500px; border-radius: 20%;">
-                                    {{-- <img src="image/posts/{{ $item->image }}" width="100px" height="80px"> --}}
-                                    {{-- <div class="post-images1">
+                                        </div>
+                                        <h4>
+
+                                            {!! $item->body !!}
+                                        </h4>
+                                        <div class="post-images">
+                                            <img src="image/posts/{{ $item->image }}" alt="post images 01"
+                                                height="500px; border-radius: 20%;">
+                                            {{-- <img src="image/posts/{{ $item->image }}" width="100px" height="80px"> --}}
+                                            {{-- <div class="post-images1">
                                         <img src="image/ShowAllPost/images/pp2.jpg" alt="post images 02">
                                         <img src="image/ShowAllPost/images/pp3.jpg" alt="post images 03">
                                     </div>
                                     <div class="post-images2">
                                         <img src="image/ShowAllPost/images/pp4.jpg" alt="post images 04">
                                     </div> --}}
-                                </div>
+                                        </div>
 
-                                <div class="like-comment">
-                                    <ul>
-                                        <li>
-                                            <img src="image/ShowAllPost/images/love.png" alt="love">
-                                            <img src="image/ShowAllPost/images/like.png" alt="like">
-                                            <span>22k like</span>
-                                        </li>
-                                        <li><i class="fa-regular fa-comment-dots"></i> <span>555 comments</span></li>
-                                        <li><i class="fa-solid fa-share-from-square"></i> <span>254 share</span></li>
-                                    </ul>
+                                        <div class="like-comment">
+                                            <ul>
+                                                <li>
+                                                    <img src="image/ShowAllPost/images/love.png" alt="love">
+                                                    <img src="image/ShowAllPost/images/like.png" alt="like">
+                                                    <span>22k like</span>
+                                                </li>
+                                                <li><i class="fa-regular fa-comment-dots"></i> <span>555
+                                                        comments</span></li>
+                                                <li><i class="fa-solid fa-share-from-square"></i> <span>254
+                                                        share</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    @endforeach
-                    
-                </div> <!-- home center wrapper end -->
-            </div> <!-- home center end -->
+                        @endforeach
 
-            <div class="home-right">
-                <div class="home-right-wrapper">
+                    </div> <!-- home center wrapper end -->
+                </div> <!-- home center end -->
 
-                    <div class="event-friend">
-                        <div class="event">
-                            <h3 class="heading">Upcoming Events <span>see all</span></h3>
-                            <img src="image/ShowAllPost/images/eve.jpg" alt="event-img">
-                            <div class="event-date">
-                                <h3>21 <b>july</b></h3>
-                                <h4>United state of America <span>New York City</span></h4>
+                <div class="home-right">
+                    <div class="home-right-wrapper">
+
+                        <div class="event-friend">
+                            <div class="event">
+                                <h3 class="heading">Upcoming Events <span>see all</span></h3>
+                                <img src="image/ShowAllPost/images/eve.jpg" alt="event-img">
+                                <div class="event-date">
+                                    <h3>21 <b>july</b></h3>
+                                    <h4>United state of America <span>New York City</span></h4>
+                                </div>
+                                <button><i class="fa-regular fa-star"></i> interested</button>
                             </div>
-                            <button><i class="fa-regular fa-star"></i> interested</button>
+
+                            <hr>
+
+                            <div class="friend">
+                                <h3 class="heading">Friend Requests <span>see all</span></h3>
+                                <ul>
+                                    <li><img src="image/ShowAllPost/images/user4.jpg" alt="user"></li>
+                                    <li>
+                                        <b>armanul islam</b>
+                                        <p>Lorem ipsum dolor sit amet.</p>
+                                        <button>confirm</button><button class="friend-remove">remove</button>
+                                    </li>
+                                </ul>
+                            </div>
+
                         </div>
 
-                        <hr>
-                    
-                        <div class="friend">
-                            <h3 class="heading">Friend Requests <span>see all</span></h3>
+                        <div class="create-page">
                             <ul>
-                                <li><img src="image/ShowAllPost/images/user4.jpg" alt="user"></li>
                                 <li>
-                                    <b>armanul islam</b>
-                                    <p>Lorem ipsum dolor sit amet.</p>
-                                    <button>confirm</button><button class="friend-remove">remove</button>
+                                    <i class="fa-solid fa-circle-plus"></i>
+                                    <h4>Create Page & Groups</h4>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </li>
+                                <li>
+                                    <img src="image/ShowAllPost/images/group.jpg" alt="groups">
+                                </li>
+                                <li>
+                                    <b>simple group or page name <span>200k Members</span></b>
+                                    <button>Join Group</button>
                                 </li>
                             </ul>
                         </div>
 
-                    </div>
-
-                    <div class="create-page">
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-circle-plus"></i>
-                                <h4>Create Page & Groups</h4>
+                        <div class="messenger">
+                            <div class="messenger-search">
+                                <i class="fa-solid fa-user-group"></i>
+                                <h4>Messenger</h4>
+                                <input type="search" placeholder="Search">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                            </li>
-                            <li>
-                                <img src="image/ShowAllPost/images/group.jpg" alt="groups">
-                            </li>
-                            <li>
-                                <b>simple group or page name <span>200k Members</span></b>
-                                <button>Join Group</button>
-                            </li>
-                        </ul>
-                    </div>
+                            </div>
+                            <ul>
+                                <li>
+                                    <img src="image/ShowAllPost/images/us2.png" alt="user">
+                                    <b>Zunayed Hossain <span>Online</span></b>
+                                    <i class="fa-brands fa-facebook-messenger"></i>
+                                </li>
 
-                    <div class="messenger">
-                        <div class="messenger-search">
-                            <i class="fa-solid fa-user-group"></i>
-                            <h4>Messenger</h4>
-                            <input type="search" placeholder="Search">
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                                <li>
+                                    <img src="image/ShowAllPost/images/us3.png" alt="user">
+                                    <b>Armanul Islam <span>Offline</span></b>
+                                    <i class="fa-brands fa-facebook-messenger"></i>
+                                </li>
+
+                                <li>
+                                    <img src="image/ShowAllPost/images/us4.png" alt="user">
+                                    <b>Mohammad Amir <span>Online</span></b>
+                                    <i class="fa-brands fa-facebook-messenger"></i>
+                                </li>
+                            </ul>
                         </div>
-                        <ul>
-                            <li>
-                                <img src="image/ShowAllPost/images/us2.png" alt="user">
-                                <b>Zunayed Hossain <span>Online</span></b>
-                                <i class="fa-brands fa-facebook-messenger"></i>
-                            </li>
 
-                            <li>
-                                <img src="image/ShowAllPost/images/us3.png" alt="user">
-                                <b>Armanul Islam <span>Offline</span></b>
-                                <i class="fa-brands fa-facebook-messenger"></i>
-                            </li>
-
-                            <li>
-                                <img src="image/ShowAllPost/images/us4.png" alt="user">
-                                <b>Mohammad Amir <span>Online</span></b>
-                                <i class="fa-brands fa-facebook-messenger"></i>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div><!-- home right wrapper end -->
-            </div><!-- home right end -->
+                    </div><!-- home right wrapper end -->
+                </div><!-- home right end -->
 
 
 
 
 
 
+            </div>
         </div>
     </div>
-</div>
 
 
 
 
-<!-- home section end -->
+    <!-- home section end -->
 
-<script>
-    var darkButton = document.querySelector(".darkTheme");
+    <script>
+        var darkButton = document.querySelector(".darkTheme");
 
-    darkButton.onclick = function(){
-        darkButton.classList.toggle("button-Active");
-        document.body.classList.toggle("dark-color")
-    }
-
-</script>
+        darkButton.onclick = function() {
+            darkButton.classList.toggle("button-Active");
+            document.body.classList.toggle("dark-color")
+        }
+    </script>
 
 </body>
+
 </html>

@@ -1,6 +1,9 @@
 @extends('layout.master')
 @section('content')
     {{-- end  add country modal --}}
+
+
+    
     <div class="container-fluid px-4">
 
 
@@ -28,7 +31,11 @@
                                 <th scope="row">{{ $item->id }}</th>
                                 <td><img src="image/posts/{{ $item->image }}" width="100px" height="80px"></td>
                                 <td>{{ $item->title }}</td>
-                                <td>{{ $item->body }}</td>
+                                <td>
+                                {!!  $item->body !!} 
+                                </td>
+
+                                
 
 
 

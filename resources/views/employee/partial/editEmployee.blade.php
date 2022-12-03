@@ -13,7 +13,7 @@
                   
 
                     <div class="col-lg-4"></div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 card">
                         @if ($errors->any())
                         @foreach ($errors->all() as $error)
                             <p class="text-danger">{{ $error }}</p>

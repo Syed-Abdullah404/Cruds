@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\File;
+use lluminate\Database\Eloquent\Collection;
 
 class PostController extends Controller
 {
@@ -16,6 +18,7 @@ class PostController extends Controller
      */
     public function index()
     {
+
         $post = Post::where('user_id', auth()->user()->id)->paginate(5);
         // return view('Post.post');
         return view('Post.post', compact('post'));
@@ -39,6 +42,41 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
+        //     Post::create([
+        //     $input,
+        //     $user
+        // ]);
+        // Testimonial::create($request->except('_token'));
+        // Testimonial::create($request->except('title', 'body'));
+        // $request->merger()
+        // doctrine 
+
+        // php artisan make:migration drop_title_column_from_posts_table --table=posts  
+        // php artisan make:migration drop_title_column_from_posts_table --create=posts  
+        // .change
+
+        // $username = user::where('id', $request->user_id)->first();
+        // $request->validate([
+        //     'title' => 'required',
+        //     'body' => 'required',
+        //     'image' => 'required|max:2048',
+        // ]);
+      
+       
+        // if ($image = $request->file('image')) {
+        //     $destinationPath = 'image/posts/';
+        //     $filename = $image->getClientOriginalName();
+ 
+        //     $image->move($destinationPath, $filename);
+        //     $input['image'] = "$filename";
+        // }
+        // $request->merge(['username' => $username->name]);
+        // dd( $request->all());
+    //   dd($request->all);
+        // $input = $request->all(); 
+        // Post::create($request);
+        // return redirect('post');
         $request->validate([
             'title' => 'required',
             'body' => 'required',
@@ -46,7 +84,7 @@ class PostController extends Controller
         ]);
 
         $input = $request->all();
-// dd($input);
+
         if ($image = $request->file('image')) {
             // dd($image);
             $destinationPath = 'image/posts/';
@@ -59,7 +97,6 @@ class PostController extends Controller
 
         return redirect('post');
     }
-
     /**
      * Display the specified resource.
      *
@@ -127,6 +164,6 @@ class PostController extends Controller
     public function destroy(post $post)
     {
         $post->delete();
-        return response()->json(['status'=>'delete successfully']);
+        return response()->json(['status' => 'delete successfully']);
     }
 }

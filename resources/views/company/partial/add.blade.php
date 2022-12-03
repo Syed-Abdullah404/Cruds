@@ -1,24 +1,34 @@
 @extends('layout.master')
 @section('content')
-
+<style>
+    /* .card{
+        /* border: 1px solid black ; */
+        padding:40px;
+        border-radius:12px;
+        
+        box-shadow: 40px 40px 20px 0px rgba(0, 0, 0, 0.295);
+    background-color: rgba(0,0,0,0.2);
+    transition: 0.3s;
+    } */
+</style>
     <div class="container-fluid px-4">
 
 
         <div class="row my-5">
-            <h3 class="fs-4 mb-3">Add Company Data</h3>
+            
             <div class="col">
                 <div class="container">
                     <div class="row">
 
 
                         <div class="col-lg-4"></div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 card" >
                             @if ($errors->any())
                                 @foreach ($errors->all() as $error)
                                     <p class="text-danger">{{ $error }}</p>
                                 @endforeach
                             @endif
-                            <form method="POST" action="{{ route('company.store') }}">
+                            <form method="POST" action="{{ route('company.store') }}" >
                                 @csrf
                                 <!-- Email input -->
                                 <div class="form-outline mb-4">
