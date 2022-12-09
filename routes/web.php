@@ -17,6 +17,7 @@ use App\Http\Controllers\profileController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\registerController;
 use App\Http\Controllers\EmployeesController;
+use App\Http\Controllers\viewPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,4 +76,5 @@ Route::post('/dasboard', [profileController::class, 'update'])->name('dashboard.
 
 Route::resource('/post', PostController::class);
 Route::resource('/postShow', showPostController::class);
-Route::resource('/allpost', showAllPostController::class);
+Route::resource('/allpost', viewPostController::class);
+

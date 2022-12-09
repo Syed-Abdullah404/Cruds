@@ -13,8 +13,8 @@
                     <div class="row">
 
 
-                        <div class="col-lg-4"></div>
-                        <div class="col-lg-4 card">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10 card">
                             @if ($errors->any())
                                 @foreach ($errors->all() as $error)
                                     <p class="text-danger">{{ $error }}</p>
@@ -23,7 +23,7 @@
                             <form method="POST" action="{{ route('post.store') }}" enctype="multipart/form-data">
                                 @csrf
                                 <!-- first input -->
-                                <input type="text" id="form3Example3" name="user_id"
+                                <input type="hidden" id="form3Example3" name="user_id"
                                 value="{{ auth()->user()->id }}" class="form-control form-control-lg"
                                  />
                                 {{-- <input type="hidden" id="form3Example3" name="username"
@@ -70,7 +70,7 @@
 
                             </form>
                         </div>
-                        <div class="col-lg-4"></div>
+                        <div class="col-lg-1"></div>
                     </div>
                 </div>
             </div>

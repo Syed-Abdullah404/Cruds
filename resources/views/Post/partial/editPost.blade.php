@@ -11,8 +11,8 @@
                     <div class="row">
 
 
-                        <div class="col-lg-4"></div>
-                        <div class="col-lg-4 card">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10 card">
                             @if ($errors->any())
                                 @foreach ($errors->all() as $error)
                                     <p class="text-danger">{{ $error }}</p>
@@ -66,7 +66,7 @@
                                 </div>
 
                                 <div class="text-center text-lg-start mt-1 pt-2">
-                                    <button type="submit" name="submit" class="btn btn-primary btn-lg"
+                                    <button type="submit" class="btn btn-primary btn-lg"
                                         style="padding-left: 2.5rem; padding-right: 2.5rem; margin-bottom:13px;">Login</button>
                                     <!-- <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
                                   class="link-danger">Register</a></p> -->
@@ -74,7 +74,7 @@
 
                             </form>
                         </div>
-                        <div class="col-lg-4"></div>
+                        <div class="col-lg-1"></div>
                     </div>
                 </div>
             </div>

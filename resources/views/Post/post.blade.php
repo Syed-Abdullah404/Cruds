@@ -12,7 +12,7 @@
                         style="margin-left: 15px" class="btn btn-success">
                         Add POST
                     </button></a></h3>
-
+                   
             <div class="col">
                 <table class="table bg-white rounded shadow-sm  table-hover">
                     <thead>

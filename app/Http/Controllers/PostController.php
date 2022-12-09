@@ -4,10 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\User;
+use App\Events\postCreate;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\File;
+use App\Notifications\postNotification;
 use lluminate\Database\Eloquent\Collection;
+
 
 class PostController extends Controller
 {
@@ -43,6 +46,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
 
+        
         //     Post::create([
         //     $input,
         //     $user
@@ -62,25 +66,25 @@ class PostController extends Controller
         //     'body' => 'required',
         //     'image' => 'required|max:2048',
         // ]);
-      
-       
+
+
         // if ($image = $request->file('image')) {
         //     $destinationPath = 'image/posts/';
         //     $filename = $image->getClientOriginalName();
- 
+
         //     $image->move($destinationPath, $filename);
         //     $input['image'] = "$filename";
         // }
         // $request->merge(['username' => $username->name]);
         // dd( $request->all());
-    //   dd($request->all);
+        //   dd($request->all);
         // $input = $request->all(); 
         // Post::create($request);
         // return redirect('post');
         $request->validate([
-            'title' => 'required',
-            'body' => 'required',
-            'image' => 'required|max:2048',
+            // 'title' => 'required',
+            // 'body' => 'required',
+            // 'image' => 'required|max:2048',
         ]);
 
         $input = $request->all();
@@ -94,6 +98,22 @@ class PostController extends Controller
         }
 
         Post::create($input);
+        // $data = auth()->user()->name.' upload the post go and check it';
+
+        // event(new postCreate($data));
+        if (auth()->user()) {
+            $users = User::all();
+            // $users = User::whereId(!$request->id)->get();
+          
+            foreach ($users as $user) {
+                if ($user->email == auth()->user()->email) {
+
+                } else {
+                    $user->notify(new postNotification(auth()->user()));
+                }
+            }
+           
+        }
 
         return redirect('post');
     }
