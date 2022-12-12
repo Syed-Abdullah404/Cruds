@@ -17,6 +17,10 @@
     {{-- <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" /> --}}
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    {{-- summer note editor --}}
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+
     <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/css/jquery-editable.css"
         rel="stylesheet" />
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> --}}
@@ -120,7 +124,8 @@
                                                 <ul>
                                                     <li>
 
-                                                        <span class="bg-blue-300"><b>{{ $notify->data['name'] }}</b> send a
+                                                        <span class="bg-blue-300"><b>{{ $notify->data['name'] }}</b>
+                                                            send a
                                                             post go and check it </span>
                                                     </li>
                                                 </ul>
@@ -383,7 +388,8 @@
         </div>
     </div>
 
-
+    {{-- summer note js --}}
+   
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script>

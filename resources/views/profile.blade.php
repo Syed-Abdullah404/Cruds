@@ -69,9 +69,7 @@
                                     <input type="password" id="form3Example3" name="old_password" value=""
                                         class="form-control form-control-lg @error('old_password') is-invalid @enderror"
                                         placeholder="Enter a valid password" @error('old_password') is-invalid @enderror />
-                                    {{-- @error('old_password')
-                                        <span class="text-danger">{{$message}}</span>
-                                         @enderror --}}
+                                    
                                 </div>
                                 <div class="form-outline mb-4">
                                     <label class="form-label" for="form3Example3"> Password</label>

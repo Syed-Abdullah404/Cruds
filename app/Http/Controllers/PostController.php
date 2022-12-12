@@ -82,9 +82,9 @@ class PostController extends Controller
         // Post::create($request);
         // return redirect('post');
         $request->validate([
-            // 'title' => 'required',
-            // 'body' => 'required',
-            // 'image' => 'required|max:2048',
+            'title' => 'required',
+            'body' => 'required',
+            'image' => 'required|max:2048',
         ]);
 
         $input = $request->all();
